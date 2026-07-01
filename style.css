@@ -90,6 +90,7 @@ input::placeholder {
   align-items: flex-end;
   color: white;
   margin-top: 13px;
+  margin-bottom: 10px;
   background-image: url(image-background-PNG.png);
   background-size: cover;
   height: 200px;
@@ -136,10 +137,12 @@ fill: white;
   height: 36px;
 }
 .menu-box{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  
+  display: grid;
+  grid-template-columns: repeat(4 , 36%);
+grid-template-rows: repeat(2 , 67px);
+justify-content: center;
+align-items: center;
+gap:2px 2%;
 }
 .menu-box>div>p{
   font-size: 89%;
@@ -149,14 +152,117 @@ fill: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 15%;
-  height: 100px;
    border: 1px solid rgb(223, 223, 223);
   border-radius: 7px;
-  margin: 10px 3px;
+  margin: 7px 2% 7px 2%;
 }
 .menu-box>div:hover{
   background-color: black;
   color: gold;
   cursor: pointer;
 }
+/* main */
+main{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+display: flex;
+flex-direction: column;
+}
+main>.main-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ width: 94%;
+ height: 60px;
+margin: 3px;
+}
+
+main>.main-title>.box-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+   width: 50%;
+}
+main>.main-title>.box-right>h3{
+  padding: 0;
+  margin: 0;
+}
+ main>.main-title>.box-left{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+ }
+main>.main-title>.box-left>p{
+   padding: 0;
+  margin: 0;
+   color: var(--color);
+}
+main>.main-title>.box-left>svg{
+  width: 21px;
+  height: 26px;
+  color: var(--color);
+}
+main>.main-text{
+  
+   width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2 , 45%);
+  grid-template-rows: repeat(2 , 300px);
+  gap: 0% 2%;
+  justify-content: center;
+  align-items: center;
+}
+main>.main-text>div{
+  padding: 10px;
+   margin: 7px 2% 7px 2%;
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 7px;
+}
+main>.main-text>div>img{
+  height: 56%;
+  width: 100%;
+ 
+}
+main>.main-text>div>button{
+  width: 70%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+   justify-content: center;
+  align-items: center;
+      border-radius: 7px;
+      background-color: var(--color);
+      border: none;
+      color: white;
+
+}
+main>.main-text>div>button:hover{
+  background-color: rgb(255, 177, 255);
+  color: black;
+}
+main>.main-text>div>button>svg{
+width: 20px;
+height: 20px;
+color: var(--color);
+}
+main>.main-text>div>p{
+
+}
+.price{
+  color: var(--color);
+}
+
+
